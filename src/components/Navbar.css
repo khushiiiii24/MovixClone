@@ -1,0 +1,15 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.right{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    font-size: x-large;
+}
+.logo{
+    width: 200px;
+    height: 50px;
+
+}
