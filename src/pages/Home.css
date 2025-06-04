@@ -1,0 +1,17 @@
+.poster_image{
+    width: 35vh;
+    height: 300px;
+}
+ul{
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 30px;
+
+}
+li{
+    list-style-type: none;
+}
+.container{
+    margin: 80px;
+}

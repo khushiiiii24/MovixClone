@@ -1,7 +1,7 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
 import './Navbar.css'
-import Logo from '../assets/netflix.png'
+import Logo from '../assets/movix-logo.svg'
 import {Link} from 'react-router-dom';
 function Navbar() {
   return (
