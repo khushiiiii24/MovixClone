@@ -1,6 +1,7 @@
 .poster_image{
     width: 35vh;
     height: 300px;
+    border-radius: 15px;
 }
 ul{
     display: flex;
@@ -13,5 +14,9 @@ li{
     list-style-type: none;
 }
 .container{
-    margin: 80px;
+    margin: 0px 200px;
+}
+.heading{
+     font-size: 24px;
+  font-weight: 500;
 }

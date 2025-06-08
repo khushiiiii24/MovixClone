@@ -1,15 +1,27 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
+*{
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 }
-.right{
-    display: flex;
-    justify-content: space-between;
-    gap: 80px;
-    font-size: x-large;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000409;
+  color: white;
+  gap: 740px;
+  
 }
-.logo{
-    width: 200px;
-    height: 50px;
-
+.right {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: medium;
+  color: white;
+}
+.logo {
+  width: 200px;
+  height: 50px;
+}
+.rightList {
+  color: white;
+  text-decoration: none;
 }

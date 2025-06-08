@@ -1,0 +1,58 @@
+.searchBar {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 205px;
+}
+.welcome {
+  font-size: 90px;
+}
+.welcomeCaption {
+  font-size: 24px;
+  font-weight: 500;
+}
+.searchInput {
+  width: 100%;
+  padding: 20px;
+  border-radius: 30px;
+  font-size: large;
+  padding-left: 30px;
+}
+/* .inputDiv {
+  margin-top: 30px;
+  display: flex;
+  position: relative;
+} */
+.searchBtn {
+  position: absolute;
+  right: 0;
+  height: 54px;
+  padding: 0px 30px;
+  background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+  border: none;
+  outline: none;
+}
+.inputBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+      
+}
+.inputText{
+    width: 730px;
+    padding: 15px;
+    border-radius: 20px 0px 0px 20px;
+      border: unset;
+       font-size: large;
+}
+.SearchBtn{
+    border-radius: 0px 20px 20px 0px;
+   padding: 14.5px;
+   color: white;
+   font-size: large;
+   border: unset;
+   width: 15%;
+     background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+}

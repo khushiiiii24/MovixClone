@@ -12,15 +12,15 @@ function Home() {
       "https://api.themoviedb.org/3/trending/movie/day?api_key=57ba7c00ee14d8883b9d0fd8084391a0&language=en-US"
     );
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     setTrendingMoviesDay(data.results);
-    console.log(data.results);
+    // console.log(data.results);
   }
 
   return (
     <div className="container">
-      <h1>Trending movies by day</h1>
+      <h1 className="heading">Trending</h1>
       <ul>
         {trendingMoviesDay.map((movieDay) => (
           <li key={movieDay.id}>

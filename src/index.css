@@ -1,4 +1,10 @@
 *{
-    background-color: #072757;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+    background-color:#041226;
     color: white;
+    
 }

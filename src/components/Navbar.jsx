@@ -5,17 +5,19 @@ import Logo from '../assets/movix-logo.svg'
 import {Link} from 'react-router-dom';
 function Navbar() {
   return (
+  <>
     <div className="navbar">
       <div className="moviesite"> <Link to="/"><img src={Logo} alt="Logo" className="logo" /></Link></div>
       <div className="right">
-          <Link to="/Movies">MOVIES</Link>
-         <Link to="/Tvshows">TV SHOWS</Link>
+          <Link to="/Movies" className="rightList">Movies</Link>
+         <Link to="/Tvshows"  className="rightList">TV Shows</Link>
           <div>
             <FaSearch />
           </div>
       
       </div>
     </div>
+  </>
   );
 }
 
