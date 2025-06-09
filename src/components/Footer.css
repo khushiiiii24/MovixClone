@@ -11,12 +11,11 @@
   text-align: center;
   width: 63%;
 }
-.FooterPages,
-.FooterIcons {
+.FooterPages {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   list-style-type: none;
 }
 .FooterDescription{
@@ -33,4 +32,11 @@
     justify-content: center;
     cursor: pointer;
     transition: all ease .3s;
+}
+.FooterIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
 }
