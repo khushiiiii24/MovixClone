@@ -1,39 +1,48 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-const baseImageURL = "https://image.tmdb.org/t/p/original";
 import "./Home.css";
-function Home() {
-  const [trendingMoviesDay, setTrendingMoviesDay] = useState([]);
-  useEffect(() => {
-    fetchTrendingMoviesDay();
-  }, []);
-  async function fetchTrendingMoviesDay() {
-    const response = await fetch(
-      "https://api.themoviedb.org/3/trending/movie/day?api_key=57ba7c00ee14d8883b9d0fd8084391a0&language=en-US"
-    );
-    const data = await response.json();
-    // console.log(data);
 
-    setTrendingMoviesDay(data.results);
-    // console.log(data.results);
-  }
+const baseImageURL = "https://image.tmdb.org/t/p/original";
+
+function Home({ heading, btn1, btn2, urls }) {
+  const [allMovieData, setAllMovieData] = useState([]);
+
+  useEffect(() => {
+    async function fetchTrendingMoviesDay() {
+      try {
+        const responses = await Promise.all(urls.map((url) => fetch(url)));
+        const results = await Promise.all(responses.map((res) => res.json()));
+        const data = results.flatMap((res) => res.results || []);
+        setAllMovieData(data);
+      } catch (err) {
+        console.error("Error fetching trending movies:", err);
+      }
+    }
+
+    fetchTrendingMoviesDay();
+  }, [urls]);
 
   return (
     <div className="container">
-      <h1 className="heading">Trending</h1>
-      <ul>
-        {trendingMoviesDay.map((movieDay) => (
-          <li key={movieDay.id}>
+      <div className="heading-btn">
+        <h1 className="heading">{heading}</h1>
+        <div className="homeBtns">
+          <button className="btn1">{btn1}</button>
+          <button className="btn2">{btn2}</button>
+        </div>
+      </div>
+
+      <ul className="scrollBar">
+        {allMovieData.map((movie) => (
+          <li key={movie.id}>
             <div className="poster">
               <img
                 className="poster_image"
-                src={`${baseImageURL}${movieDay.poster_path}`}
+                src={`${baseImageURL}${movie?.poster_path}`}
+                alt={movie.title || movie.name}
               />
             </div>
-            <div>{movieDay.original_title}</div>
-            <div>{movieDay.release_date}</div>
-            <button>day</button>
-            <button>week</button>
+            <div className="MovieName">{movie.original_title || movie.name}</div>
+            <div className="releaseDate">{movie.release_date || movie.first_air_date}</div>
           </li>
         ))}
       </ul>

@@ -1,0 +1,25 @@
+.FooterMainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000409;
+  padding: 50px 0;
+  color: #fff;
+  margin-top: 60px;
+}
+.FooterContainer {
+  text-align: center;
+  width: 63%;
+}
+.FooterPages,
+.FooterIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  list-style-type: none;
+}
+.FooterDescription{
+    margin: 40px;
+    opacity: 0.5;
+}

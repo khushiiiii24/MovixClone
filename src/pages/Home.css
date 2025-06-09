@@ -1,22 +1,71 @@
-.poster_image{
-    width: 35vh;
-    height: 300px;
-    border-radius: 15px;
+.poster_image {
+  width: 35vh;
+  height: 300px;
+  border-radius: 15px;
 }
-ul{
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    gap: 30px;
 
+ul.scrollBar {
+  display: flex;
+  overflow-x: auto;
+  padding: 0;
+  gap: 30px;
+  scrollbar-width: none; /* Firefox */
+  scroll-snap-type: x mandatory;
 }
-li{
-    list-style-type: none;
+
+ul.scrollBar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
-.container{
-    margin: 0px 200px;
+
+ul.scrollBar li {
+  list-style-type: none;
+  scroll-snap-align: center;
+  flex: 0 0 auto;
 }
-.heading{
-     font-size: 24px;
+
+.container {
+  margin: 0px 200px;
+}
+
+.heading {
+  font-size: 24px;
   font-weight: 500;
+}
+
+.btn1 {
+  background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.btn2 {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.heading-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.homeBtns {
+  background-color: white;
+  /* padding: 15px 85px; */
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.MovieName{
+    font-size: 20px;
+}
+.releaseDate{
+    font-size: 14px;
+    opacity: 0.5    ;
 }
