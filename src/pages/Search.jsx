@@ -12,15 +12,15 @@ function Search() {
       "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=57ba7c00ee14d8883b9d0fd8084391a0"
     );
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     // setBackgroundImg(data.results)
     const validMovies = data.results.filter((movie) => movie.backdrop_path);
-    console.log(validMovies);
+    // console.log(validMovies);
     
     setBackgroundImg(validMovies);
     
   }
-  console.log(backgroundImg);
+  // console.log(backgroundImg);
   
   return (
     <div className="searchBar">

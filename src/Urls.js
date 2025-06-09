@@ -4,7 +4,7 @@ export const urls = {
   trendingMoviesDay:
     `${baseURL}/trending/movie/day?language=en-US&api_key=${API_KEY}`,
   trendingMoviesWeek:
-    `${baseURL}/trending/movie/day?language=en-US&api_key=${API_KEY}`,
+    `${baseURL}/trending/movie/week?language=en-US&api_key=${API_KEY}`,
   popularMovies:
     `${baseURL}/movie/popular?language=en-US&page=1&api_key=${API_KEY}`,
   popularTvshows:
