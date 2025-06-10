@@ -59,7 +59,7 @@ function Home({ heading, btn1, btn2, urls }) {
 
       <ul className="scrollBar">
         {allMovieData.map((movie) => (
-          <li key={movie.id}>
+          <li key={movie.id} >
             <div className="poster">
               <img
                 className="poster_image"

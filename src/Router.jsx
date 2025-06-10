@@ -6,7 +6,7 @@ import Movies from "../src/pages/Movies";
 import Tvshows from "../src/pages/Tvshows";
 import First from "./pages/First";
 import App from "./App";
-
+import SinglePages from "./pages/SinglePages";
 const router=createBrowserRouter([{
     path:"/",
     element:<First/>,
@@ -20,6 +20,9 @@ const router=createBrowserRouter([{
         },{
             path:"/Tvshows",
             element:<Tvshows/>
+        },{
+            path:"/SinglePages",
+            element:<SinglePages/>
         }
     ]
 }])
