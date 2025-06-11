@@ -55,14 +55,20 @@ function SinglePages() {
         </div>
         <div class="singleMovieDetails">
           <div class="basic-info">
-            <span class="status">status:Released</span>
-            <span class="release-date">release-date:Jun 5, 2025</span>
-            <span class="runtime">runtime:1h 25m</span>
+            <span class="status">
+              <span className="basic-info-title">Status:</span><span className="basic-info-subtitle">Released</span>
+            </span>
+            <span class="release-date">
+              <span className="basic-info-title">Release-date:</span><span className="basic-info-subtitle">Jun 5, 2025</span>
+            </span>
+            <span class="runtime">
+              <span className="basic-info-title">Runtime:</span><span className="basic-info-subtitle">1h 25m</span>
+            </span>
           </div>
-          <div class="credits">
-            <p class="director">Director: Dan Trachtenberg</p>
-            <p class="writer">Writer: Dan Trachtenberg, Micho Rutare</p>
-          </div>
+         
+            <div class=" basic-info director">Director: <span className="basic-info-subtitle">Dan Trachtenberg</span></div>
+            <div class=" basic-info writer">Writer: <span className="basic-info-subtitle">Dan Trachtenberg, Micho Rutare</span></div>
+      
         </div>
       </div>
     </div>
