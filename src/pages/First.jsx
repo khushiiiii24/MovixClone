@@ -8,8 +8,8 @@ function First() {
   return (
     <div>
         <Navbar/>
-        {/* <Outlet/> */}
-           <SinglePages/>
+        <Outlet/>
+           {/* <SinglePages/> */}
         <Footer/>
      
     </div>

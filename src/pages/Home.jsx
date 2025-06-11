@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 
 const baseImageURL = "https://image.tmdb.org/t/p/original";
 
@@ -38,10 +39,14 @@ function Home({ heading, btn1, btn2, urls }) {
   }, [showData]);
   // console.log(showData);
   function trimContent(content) {
-    if (content.length >28) {
+    if (content.length > 28) {
       return content.slice(0, 16) + "...";
     }
-    return content
+    return content;
+  }
+  const navigate = useNavigate();
+  function handleSinglePage() {
+    navigate("/SinglePages");
   }
   return (
     <div className="container">
@@ -59,7 +64,7 @@ function Home({ heading, btn1, btn2, urls }) {
 
       <ul className="scrollBar">
         {allMovieData.map((movie) => (
-          <li key={movie.id} >
+          <li key={movie.id} onClick={handleSinglePage}>
             <div className="poster">
               <img
                 className="poster_image"
