@@ -7,6 +7,8 @@ import Tvshows from "../src/pages/Tvshows";
 import First from "./pages/First";
 import App from "./App";
 import SinglePages from "./pages/SinglePages";
+import { urls } from "./Urls";
+
 const router=createBrowserRouter([{
     path:"/",
     element:<First/>,
@@ -16,12 +18,14 @@ const router=createBrowserRouter([{
             element:<App/>
         },{
             path:"/Movies",
-            element:<Movies/>
+            element:<Movies        
+              heading="Explore Movies"
+               urls={[urls.trendingMoviesDay, urls.trendingMoviesWeek]}/>
         },{
             path:"/Tvshows",
             element:<Tvshows/>
         },{
-            path:"/SinglePages",
+            path:"/SinglePages/:id",
             element:<SinglePages/>
         }
     ]

@@ -30,6 +30,8 @@ function Home({ heading, btn1, btn2, urls }) {
         const result = await response.json();
         const data = result.results || [];
         setAllMovieData(data);
+        console.log(data);
+        
       } catch (err) {
         console.error("Error fetching trending movies:", err);
       }
@@ -45,8 +47,8 @@ function Home({ heading, btn1, btn2, urls }) {
     return content;
   }
   const navigate = useNavigate();
-  function handleSinglePage() {
-    navigate("/SinglePages");
+  function handleSinglePage(id) {
+    navigate(`/SinglePages/${id}`);
   }
   return (
     <div className="container">
@@ -64,7 +66,7 @@ function Home({ heading, btn1, btn2, urls }) {
 
       <ul className="scrollBar">
         {allMovieData.map((movie) => (
-          <li key={movie.id} onClick={handleSinglePage}>
+          <li key={movie.id} onClick={()=>handleSinglePage(movie.id)}>
             <div className="poster">
               <img
                 className="poster_image"
@@ -82,7 +84,8 @@ function Home({ heading, btn1, btn2, urls }) {
                 day: "numeric",
                 month: "long",
                 year: "numeric",
-              })}
+              })
+              }
             </div>
           </li>
         ))}

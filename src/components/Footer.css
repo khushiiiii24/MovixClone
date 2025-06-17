@@ -18,20 +18,20 @@
   gap: 30px;
   list-style-type: none;
 }
-.FooterDescription{
-    margin: 40px;
-    opacity: 0.5;
+.FooterDescription {
+  margin: 40px;
+  opacity: 0.5;
 }
-.FooterIcons li{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #04152d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all ease .3s;
+.FooterIcons li {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #04152d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all ease .3s;
 }
 .FooterIcons {
   display: flex;
@@ -39,4 +39,11 @@
   align-items: center;
   gap: 10px;
   list-style-type: none;
+}
+.FooterIcons :hover {
+  transform: scale(1.1);
+  color: #e60073;
+  transition: transform 0.3s;
+
+  border: 3px solid #e60073; /* pinkish-red */
 }

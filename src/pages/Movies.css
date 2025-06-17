@@ -1,0 +1,30 @@
+.moviePageHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 150px;
+  margin: 25px;
+}
+.filter {
+  display: flex;
+  gap: 20px;
+}
+.exploreMovies{
+    font-size: 24px;
+    color: #fff;
+}
+.filter select {
+  border-radius: 20px;
+  background-color: #173d77;
+  color: white;
+  height: 38px;
+  width: 250px;
+  padding-left: 15px;
+  border: none;
+  font-size: 16px;
+}
+ .filter select option{
+    background-color: #fff;
+    color: black;
+ }
